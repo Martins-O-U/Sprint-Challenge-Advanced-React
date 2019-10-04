@@ -54,3 +54,17 @@ html {
   3px 3px 5px darkgray;
   text-align: center;
 }
+
+.dark-mode {
+  color: blue; 
+  /* color:dodgerblue; */
+  background-color: #313843;
+}
+
+/* .dark-mode .card h2 h4 p{
+  color: black;
+} */
+
+button {
+    background: skyblue;
+}

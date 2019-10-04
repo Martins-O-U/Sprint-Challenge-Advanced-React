@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import SoccerPlayers from './SoccerPlayers/SoccerPlayers';
+import ModeSwitch from './SoccerPlayers/UseDarkMode';
 
 
 export default class Soccer extends React.Component {
@@ -27,6 +28,7 @@ export default class Soccer extends React.Component {
   render() {
     return (
       <div className='container'>
+        <ModeSwitch />
         <h1 className='intro'>Female Soccer Players Searches</h1>
         <SoccerPlayers players={this.state.players}/>
       </div>
