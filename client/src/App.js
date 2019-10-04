@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+export default class Soccer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      players: [],
+    };
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:5000/api/players')
+      .then(response=>{
+        debugger
+        this.setState({ 
+          players: response.data,
+        });
+        debugger
+      })
+
+  }
+
+  render() {
+    return (
+      <div className='container'>
+        <h1>Soccer Players</h1>
+      </div>
+    );
+  }
+}
