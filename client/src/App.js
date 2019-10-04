@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import SoccerPlayers from './SoccerPlayers/SoccerPlayers';
 
 
 export default class Soccer extends React.Component {
@@ -27,6 +28,7 @@ export default class Soccer extends React.Component {
     return (
       <div className='container'>
         <h1>Soccer Players</h1>
+        <SoccerPlayers players={this.state.players}/>
       </div>
     );
   }
