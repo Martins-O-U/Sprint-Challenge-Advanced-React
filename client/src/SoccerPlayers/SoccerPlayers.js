@@ -10,8 +10,8 @@ class SoccerPlayers extends Component{
                 <div className='card' key={player.id}>
                     <div className='cardInfo'>
                         <h2 className='name'>{player.name}</h2>
-                        <h4 className='username'><i>{player.country}</i></h4>
-                        <p><strong>Location:</strong> {player.searches}</p>
+                        <h4 className='username'>Plays For:<strong id='play'>{player.country}</strong></h4>
+                        <p>Number of Searches Appeared in:<strong id='play'>{player.searches}</strong></p>
                     </div>
                 </div>
                 ))}

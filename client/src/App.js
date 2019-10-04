@@ -27,7 +27,7 @@ export default class Soccer extends React.Component {
   render() {
     return (
       <div className='container'>
-        <h1>Soccer Players</h1>
+        <h1 className='intro'>Female Soccer Players Searches</h1>
         <SoccerPlayers players={this.state.players}/>
       </div>
     );
